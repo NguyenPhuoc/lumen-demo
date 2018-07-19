@@ -7,22 +7,11 @@ return [
     'connections' => [
 
         'lumen_db' => [
-            'driver' => 'mysql',
-            'host' => '127.0.0.1',
-            'database' => 'lumen_db',
-            'username' => 'demo_user',
-            'password' => '1',
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix' => '',
-        ],
-
-        'mysql2' => [
-            'driver' => 'mysql',
-            'host' => 'host2',
-            'database' => 'database2',
-            'username' => 'user2',
-            'password' => 'pass2',
+            'driver' => env('DB_CONNECTION','mysql'),
+            'host' => env('DB_HOST', 'localhost'),
+            'database' => env('DB_DATABASE'),
+            'username' => env('DB_USERNAME'),
+            'password' => env('DB_PASSWORD'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
@@ -45,10 +34,10 @@ return [
 //        'client' => 'predis',
         'cluster' => false,
         'default' => [
-            'host' => '127.0.0.1',
-            'pass' => null,
-            'port' => 6379,
-            'database' => 0,
+            'host' => env('REDIS_HOST'),
+            'pass' => env('REDIS_PASSWORD'),
+            'port' => env('REDIS_PORT'),
+            'database' => env('REDIS_DATABASE'),
         ]
     ]
 ];

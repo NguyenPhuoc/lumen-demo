@@ -14,7 +14,7 @@ class UserController extends Controller
 
     public function index()
     {
-        return $this->responseData(1, Users::all());
+        return $this->responseData(self::SUCCESS_CODE, self::SUCCESS_MSG, Users::all());
     }
 
     /**
@@ -24,8 +24,8 @@ class UserController extends Controller
     {
         $user = Users::find($id);
         if (!$user)
-            return $this->responseData(-1, null, 'User not found');
-        return $this->responseData(1, $user);
+            return $this->responseData(self::FAIL_CODE, self::NOT_FOUNT_MSG);
+        return $this->responseData(self::SUCCESS_CODE, self::SUCCESS_MSG, $user);
     }
 
     public function create(Request $request)
@@ -37,11 +37,11 @@ class UserController extends Controller
             $users->full_name = $request->post('full_name');
             $users->save();
 
-            $data = array('code' => 1, 'msg' => 'Success');
+            $data = array('code' => self::SUCCESS_CODE, 'msg' => self::SUCCESS_MSG);
         } catch (Exception $e) {
-            $data = array('code' => -1, 'msg' => 'Failed');
+            $data = array('code' => self::FAIL_CODE, 'msg' => self::FAIL_MSG);
         }
-        return $this->responseData($data['code'], null, $data['msg']);
+        return $this->responseData($data['code'], $data['msg']);
     }
 
 
@@ -49,7 +49,7 @@ class UserController extends Controller
     {
         $users = Users::find($id);
         if (!$users)
-            return $this->responseData(-1, null, 'User not fount');
+            return $this->responseData(self::FAIL_CODE, self::NOT_FOUNT_MSG);
 
         try {
             $users->user_name = $request->input('user_name');
@@ -57,18 +57,18 @@ class UserController extends Controller
             $users->full_name = $request->input('full_name');
             $users->save();
 
-            $data = array('code' => 1, 'msg' => 'Update success');
+            $data = array('code' => self::SUCCESS_CODE, 'msg' => self::SUCCESS_MSG);
         } catch (Exception $e) {
-            $data = array('code' => -2, 'msg' => 'Update failed');
+            $data = array('code' => self::FAIL_CODE, 'msg' => self::FAIL_MSG);
         }
 
-        return $this->responseData($data['code'], null, $data['msg']);
+        return $this->responseData($data['code'], $data['msg']);
     }
 
     public function destroy($id)
     {
         Users::destroy($id);
-        return $this->responseData(1, null, 'Destroy success');
+        return $this->responseData(self::SUCCESS_CODE, self::SUCCESS_MSG);
     }
 
     public function payment(Request $request)
@@ -80,7 +80,7 @@ class UserController extends Controller
         $user = Users::find($data['user_id']);
 
         if ($data['gold'] <= 0 || !$user) {
-            return $this->responseData(-1, null, 'Param invalid');
+            return $this->responseData(self::FAIL_CODE, self::PARAM_INVALID_MSG);
         }
 
         $gifts['gold'] = (int)$data['gold'];
@@ -89,6 +89,6 @@ class UserController extends Controller
 
         event(new UserPaymentEvent($user, $data['gold']));
 
-        return $this->responseData(1, $user, 'Payment success');
+        return $this->responseData(self::SUCCESS_CODE, self::SUCCESS_MSG, $user);
     }
 }
