@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <!--<script src="https://cdn.socket.io/socket.io-1.3.4.js"></script>-->
+    <script src="/socket.io/socket.io.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-1.11.1.js"></script>-->
+</head>
+<body>
+<h1>Hello, <?php echo $name; ?> - <span id="messages"></span></h1>
+
+<script>
+    console.log("ready!...");
+
+    var socket = io.connect('http://127.0.0.1:8890');
+    socket.on('message', function (data) {
+        console.log(data);
+        // $("#messages").append(data);
+        var notification = new Notification('Notification Socket Hihi!!', {
+            //icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+            body: data,
+        });
+    });
+</script>
+</body>
+</html>
