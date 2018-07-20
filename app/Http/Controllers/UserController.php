@@ -14,7 +14,7 @@ class UserController extends Controller
 
     public function index()
     {
-        return $this->responseData(self::SUCCESS_CODE, self::SUCCESS_MSG, Users::all());
+        return $this->responseData(self::SUCCESS_CODE, self::SUCCESS_MSG, Users::all());//
     }
 
     /**
