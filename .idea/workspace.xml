@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd2b18f-d3c1-452e-b5fe-d96a3de5c6b0" name="Default" comment="" />
+    <list default="true" id="7cd2b18f-d3c1-452e-b5fe-d96a3de5c6b0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExampleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExampleController.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Users.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="391">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#23#62#0#PHP" expanded="true" />
               </folding>
@@ -26,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExampleController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ExampleController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExampleController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="546">
-              <caret line="66" column="32" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="32" />
+              <caret line="70" column="66" selection-start-line="70" selection-start-column="66" selection-end-line="70" selection-end-column="66" />
               <folding>
                 <element signature="e#40#65#0#PHP" expanded="true" />
               </folding>
@@ -184,7 +186,6 @@
         <option value="$PROJECT_DIR$/app/Listeners/TestListener.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Jobs/NewUsers.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ExampleController.php" />
         <option value="$PROJECT_DIR$/NodeJS/server.js" />
         <option value="$PROJECT_DIR$/resources/views/abc.php" />
         <option value="$PROJECT_DIR$/NodeJS/index.html" />
@@ -196,6 +197,7 @@
         <option value="$PROJECT_DIR$/bootstrap/app.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Users.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ExampleController.php" />
       </list>
     </option>
   </component>
@@ -388,7 +390,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="app.php&#9;FILE&#9;file://C:/Users/nguye/centos7/lumen_demo/demo/bootstrap/app.php&#10;guzz&#9;FILE&#9;file://C:/Users/nguye/centos7/lumen_demo/demo/vendor/guzzlehttp&#10;EventServiceProvider &#9;null&#9;null&#10;AppServiceProvider&#9;FILE&#9;file://C:/Users/nguye/centos7/lumen_demo/demo/app/Providers/AppServiceProvider.php&#10;us&#9;FILE&#9;file://C:/Users/nguye/centos7/lumen_demo/demo/app/User.php&#10;.log&#9;FILE&#9;file://C:/Users/nguye/centos7/lumen_demo/demo/vendor/symfony/http-kernel/Tests/DataCollector/Compiler.log" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gameportal_api" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -430,7 +432,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140056000" />
+    <option name="totallyTimeSpent" value="142957000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -697,6 +699,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#28#45#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -739,16 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExampleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="66" column="32" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="32" />
-          <folding>
-            <element signature="e#40#65#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -795,10 +790,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExampleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="70" column="66" selection-start-line="70" selection-start-column="66" selection-end-line="70" selection-end-column="66" />
+          <folding>
+            <element signature="e#40#65#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

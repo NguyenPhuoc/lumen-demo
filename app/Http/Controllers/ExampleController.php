@@ -60,11 +60,15 @@ class ExampleController extends Controller
             return Users::find(1);
         });
 
-//        Cache::flush();
+        $collection = collect([5, 3, 1, 2, 4]);
+
+        $sorted = $collection->sort();
+
+        $a = $sorted->reverse()->values()->all();
 
 
         $redis = Redis::connection();
-        $redis->publish('message', 'Hello Nguyen Huu Phuoc');
-        return [$redis->keys('*'), $abc];
+        $redis->publish('message', 'Hello Nguyen Huu Phuoc 12_____');
+        return [$redis->keys('*'), $abc, $a];
     }
 }
